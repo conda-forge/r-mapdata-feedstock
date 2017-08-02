@@ -13,10 +13,10 @@ source:
 
 build:
   number: 0
-  script: R CMD INSTALL --build .
-  # Skipping Windows because r-maps is not available yet.
-  # See https://github.com/conda-forge/r-maps-feedstock/issues/1
-  skip: True  # [win]
+  script:
+    - set TARGET_ARCH=  # [win]
+    - R CMD INSTALL --build .
+  skip: True  # [win32]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -34,8 +34,8 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('mapdata')"  # [not win]
-    - "\"%R%\" -e \"library('mapdata')\""  # [win]
+    - R -e "library('mapdata')"  # [not win]
+    - R -e \"library('mapdata')\""  # [win]
 
 about:
   home: https://CRAN.R-project.org/package=mapdata
