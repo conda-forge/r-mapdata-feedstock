@@ -1,4 +1,4 @@
-{% set version = '2.2-6' %}
+{% set version = "2.3.0" %}
 
 package:
   name: r-mapdata
@@ -9,7 +9,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/mapdata_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/mapdata/mapdata_{{ version }}.tar.gz
-  sha256: dbaacb331ebd595898960ccf471f73491d9a4150ec1134e0954074b5bdd5704c
+  sha256: 1edc180990387b6b1cd4e43a9505ebeb98e6115e4205c4f32f05b397c781dd76
 
 build:
   number: 0
