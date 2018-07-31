@@ -14,14 +14,16 @@ Summary: Supplement to maps package, providing the larger and/or higher-resoluti
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-mapdata-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-mapdata-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-mapdata-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-mapdata-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-mapdata-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-mapdata-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-mapdata-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-mapdata-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-mapdata-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-mapdata-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-mapdata-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-mapdata-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-mapdata/badges/version.svg)](https://anaconda.org/conda-forge/r-mapdata)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-mapdata/badges/downloads.svg)](https://anaconda.org/conda-forge/r-mapdata)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--mapdata-green.svg)](https://anaconda.org/conda-forge/r-mapdata) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-mapdata.svg)](https://anaconda.org/conda-forge/r-mapdata) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-mapdata.svg)](https://anaconda.org/conda-forge/r-mapdata) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-mapdata.svg)](https://anaconda.org/conda-forge/r-mapdata) |
 
 Installing r-mapdata
 ====================
