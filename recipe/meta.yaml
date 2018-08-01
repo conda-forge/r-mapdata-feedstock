@@ -12,7 +12,8 @@ source:
   sha256: 1edc180990387b6b1cd4e43a9505ebeb98e6115e4205c4f32f05b397c781dd76
 
 build:
-  number: 0
+  merge_build_host: True  # [win]
+  number: 1
   script:
     - set TARGET_ARCH=  # [win]
     - R CMD INSTALL --build .
@@ -23,11 +24,12 @@ build:
 
 requirements:
   build:
+    - posix  # [win]
+    - {{ compiler('c') }}        # [unix]
+    - {{ compiler('m2w64_c') }}  # [win]
+  host:
     - r-base
     - r-maps >=2.0_7
-    - posix  # [win]
-    - m2w64-toolchain  # [win64]
-    - gcc  # [not win]
   run:
     - r-base
     - r-maps >=2.0_7
