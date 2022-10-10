@@ -21,7 +21,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
+    - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}sed               # [win]
@@ -31,10 +31,9 @@ requirements:
     - {{ posix }}automake-wrapper  # [win]
     - {{ posix }}pkg-config
     - {{ posix }}make
-    - {{ posix }}sed  # [win]
-    - {{ posix }}coreutils  # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-maps >=2.0_7
@@ -50,10 +49,11 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=mapdata
-  license: GPL-2
+  license: GPL-2.0-only
   summary: Supplement to maps package, providing the larger and/or higher-resolution databases.
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
