@@ -3,7 +3,7 @@ About r-mapdata
 
 Home: https://CRAN.R-project.org/package=mapdata
 
-Package license: GPL-2
+Package license: GPL-2.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mapdata-feedstock/blob/main/LICENSE.txt)
 
