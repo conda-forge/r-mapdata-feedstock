@@ -1,6 +1,5 @@
 {% set version = "2.3.1" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-mapdata
@@ -13,8 +12,7 @@ source:
   sha256: 6021092e4241579322444d9663a1418aca6e7b774b363d1e00e9bae3102359d4
 
 build:
-  merge_build_host: true  # [win]
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,7 +20,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}sed               # [win]
     - {{ posix }}grep              # [win]
@@ -39,7 +39,6 @@ requirements:
     - r-maps >=2.0_7
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-maps >=2.0_7
 
 test:
